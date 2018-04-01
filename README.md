@@ -4,6 +4,8 @@
 
 ### file list:
 
-- list_comp.py                   - list comprehensions
-- fibonacci.py                   - Fibonacci ('for loop' and generator)
-- OOP_inheritance_decorators.py  - OOP inheritance and decorators; setter, getter and deleter
+|              file             |                           content                          |
+|:-----------------------------:|:-----------------------------------------------------------|
+| list_comp.py                  | list comprehensions                                        |
+| fibonacci.py                  | Fibonacci ('for loop' and generator)                       |
+| OOP_inheritance_decorators.py | OOP inheritance and decorators; setter, getter and deleter |
