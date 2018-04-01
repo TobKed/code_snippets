@@ -3,60 +3,60 @@
 
 
 class Person(object):
-	def __init__(self, first, last):
-		self.first = first
-		self.last = last
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
 
-	@property
-	def fullname(self):
-		return "{} {}".format(self.first, self.last)
+    @property
+    def fullname(self):
+        return "{} {}".format(self.first, self.last)
 
-	@fullname.setter
-	def fullname(self, name):
-		first, last = name.split(' ')
-		self.first = first
-		self.last = last
+    @fullname.setter
+    def fullname(self, name):
+        first, last = name.split(' ')
+        self.first = first
+        self.last = last
 
-	@fullname.deleter
-	def fullname(self):
-		print('Delete Name!')
-		self.first = None
-		self.last = None
+    @fullname.deleter
+    def fullname(self):
+        print('Delete Name!')
+        self.first = None
+        self.last = None
 
-	@property
-	def email(self):
-		return '{}.{}@regular.com'.format(self.first, self.last)
+    @property
+    def email(self):
+        return '{}.{}@regular.com'.format(self.first, self.last)
 
-	def reveal_identity(self):
-		print("My name is {}".format(self.first))
+    def reveal_identity(self):
+        print("My name is {}".format(self.first))
 
-	def __repr__(self):
-		return "Person({}, {})".format(self.first, self.last)
+    def __repr__(self):
+        return "Person({}, {})".format(self.first, self.last)
 
-	def __str__(self):
-		return "Person: {}, {}".format(self.fullname, self.email)
+    def __str__(self):
+        return "Person: {}, {}".format(self.fullname, self.email)
 
 
 class SuperHero(Person):
-	def __init__(self, first, last, hero_name):
-		# super(SuperHero, self).__init__(name)		# Python 2
-		super().__init__(first, last)						# Python 3
-		self.hero_name = hero_name
+    def __init__(self, first, last, hero_name):
+        # super(SuperHero, self).__init__(name)     # Python 2
+        super().__init__(first, last)                       # Python 3
+        self.hero_name = hero_name
 
-	@property
-	def email(self):
-		return '{}.{}@superhero.com'.format(self.first, self.last)
+    @property
+    def email(self):
+        return '{}.{}@superhero.com'.format(self.first, self.last)
 
-	def reveal_identity(self):
-		# super(SuperHero, self).reveal_identity()	# Python 2
-		super().reveal_identity()					# Python 3
-		print("...And I am {}".format(self.hero_name))
+    def reveal_identity(self):
+        # super(SuperHero, self).reveal_identity()  # Python 2
+        super().reveal_identity()                   # Python 3
+        print("...And I am {}".format(self.hero_name))
 
-	def __repr__(self):
-		return "Person({}, {}, {})".format(self.first, self.last, self.hero_name)
+    def __repr__(self):
+        return "Person({}, {}, {})".format(self.first, self.last, self.hero_name)
 
-	def __str__(self):
-		return "{}. Superhero {}".format(super().__str__(), self.hero_name)
+    def __str__(self):
+        return "{}. Superhero {}".format(super().__str__(), self.hero_name)
 
 
 print('> Creating first person')
