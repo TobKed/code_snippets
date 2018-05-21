@@ -34,6 +34,7 @@ def get_opt_from_cfg(cfg_path, section, option):
                 return config.get(section, option)
             else:
                 print("option '{}' in section '{}' doesn't exist".format(option, section))
+                return None
     else:
         print("'{}' doesn't exist".format(config_file_path))
         return None
