@@ -1,9 +1,9 @@
 # CLOSURES
-
 def html_tag(tag):
     def wrap_text(msg):
         return "<{0}>{1}</{0}".format(tag, msg)
     return wrap_text
+
 
 print_h1 = html_tag('h1')
 
@@ -54,3 +54,28 @@ display_info('John', 25)
 print()
 display_2()
 display_info_2('John', 25)
+
+
+# STACK OF DECORATORS WITH ARGUMENTS
+from functools import wraps
+
+
+def html_tag(tag):
+    def decorator(orig_func):
+        @wraps(orig_func)
+        def wrapper(*args, **kwargs):
+            text = orig_func(*args, **kwargs)
+            return f"<{tag}>{text}</{tag}>"
+        return wrapper
+    return decorator
+
+
+@html_tag("div")
+@html_tag("p")
+def get_span(text):
+    """ doc string test"""
+    return f"<span>{text}</span>"
+
+
+print(get_span("sample text"))
+print(get_span.__doc__)
