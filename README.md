@@ -1,5 +1,3 @@
-# code_snippets
-
 ## Python code snippets
 
 ### file list:
