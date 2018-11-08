@@ -1,5 +1,4 @@
-from tkinter import filedialog
-from tkinter import *
+from tkinter import Tk, filedialog
 import os
 import configparser
 
