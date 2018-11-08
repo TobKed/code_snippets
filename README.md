@@ -12,3 +12,4 @@
 | list_comp.py                  | List comprehensions                                        |
 | OOP_inheritance_decorators.py | OOP inheritance and decorators; setter, getter and deleter |
 | recursion.py                  | Recursion at the example of factorial function             |
+| tkinter_askopenfilename.py    | Open file dialog in tkinter, parse config file             |
