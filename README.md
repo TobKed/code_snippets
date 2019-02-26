@@ -5,6 +5,7 @@
 |              file             |                           content                          |
 |:------------------------------|:-----------------------------------------------------------|
 | closures_decorators.py        | Closures and decorators                                    |
+| design_pattern_singleton.py   | Singleton - Borg                                           |
 | fibonacci.py                  | Fibonacci ('for loop' and generator)                       |
 | generators.py                 | Generator and generator comprehension                      |
 | list_comp.py                  | List comprehensions                                        |
